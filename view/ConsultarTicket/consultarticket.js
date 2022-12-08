@@ -59,7 +59,7 @@ $(document).ready(function(){
                 "oPaginate": {
                     "sFirst":    "Primero",
                     "sLast":     "Último",
-                    "sNext":     "Siguiente",
+                    "sNext":     "Seguinte",
                     "sPrevious": "Anterior"
                 },
                 "oAria": {
@@ -111,7 +111,7 @@ $(document).ready(function(){
                 "oPaginate": {
                     "sFirst":    "Primero",
                     "sLast":     "Último",
-                    "sNext":     "Siguiente",
+                    "sNext":     "Seguinte",
                     "sPrevious": "Anterior"
                 },
                 "oAria": {

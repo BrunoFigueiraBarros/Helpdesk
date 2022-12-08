@@ -73,7 +73,7 @@ $(document).ready(function(){
             "oPaginate": {
                 "sFirst":    "Primero",
                 "sLast":     "Último",
-                "sNext":     "Siguiente",
+                "sNext":     "Seguinte",
                 "sPrevious": "Anterior"
             },
             "oAria": {
@@ -103,12 +103,12 @@ function editar(usu_id){
 function eliminar(usu_id){
     swal({
         title: "HelpDesk",
-        text: "Esta seguro de Eliminar el registro?",
+        text: "Deseja apagar esse usuário?",
         type: "error",
         showCancelButton: true,
         confirmButtonClass: "btn-danger",
-        confirmButtonText: "Si",
-        cancelButtonText: "No",
+        confirmButtonText: "Sim",
+        cancelButtonText: "Não",
         closeOnConfirm: false
     },
     function(isConfirm) {
@@ -121,7 +121,7 @@ function eliminar(usu_id){
 
             swal({
                 title: "HelpDesk!",
-                text: "Registro Eliminado.",
+                text: "Registro apagado.",
                 type: "success",
                 confirmButtonClass: "btn-success"
             });
