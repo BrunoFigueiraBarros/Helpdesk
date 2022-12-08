@@ -15,7 +15,7 @@
     
     <?php require_once("../MainNav/nav.php");?>
 
-	<!-- Contenido -->
+	
 	<div class="page-content">
 		<div class="container-fluid">
 			<header class="section-header">
@@ -54,7 +54,7 @@
 
 		</div>
 	</div>
-	<!-- Contenido -->
+	
 
 	<?php require_once("modal.php");?>
 
@@ -66,6 +66,6 @@
 </html>
 <?php
   } else {
-    header("Location:".Conectar::ruta()."index.php");
+    header("Location:".Conectar::rota()."index.php");
   }
 ?>

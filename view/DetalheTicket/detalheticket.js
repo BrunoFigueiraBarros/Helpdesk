@@ -9,7 +9,7 @@ $(document).ready(function(){
 
     $('#tickd_descrip').summernote({
         height: 400,
-        lang: "es-ES",
+        lang: "pt-BR",
         callbacks: {
             onImageUpload: function(image) {
                 console.log("Image detect...");
@@ -31,7 +31,7 @@ $(document).ready(function(){
 
     $('#tickd_descripusu').summernote({
         height: 400,
-        lang: "es-ES",
+        lang: "pt-BR",
         toolbar: [
             ['style', ['bold', 'italic', 'underline', 'clear']],
             ['font', ['strikethrough', 'superscript', 'subscript']],

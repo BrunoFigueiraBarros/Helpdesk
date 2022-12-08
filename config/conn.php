@@ -20,7 +20,7 @@
 			return $this->dbh->query("SET NAMES 'utf8'");
         }
 
-        public static function ruta(){
+        public static function rota(){
 			return "";      
 		}
 

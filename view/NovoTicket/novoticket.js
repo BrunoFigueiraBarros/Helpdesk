@@ -10,7 +10,7 @@ function init(){
 $(document).ready(function() {
     $('#tick_descrip').summernote({
         height: 150,
-        lang: "es-ES",
+        lang: "pt-BR",
         callbacks: {
             onImageUpload: function(image) {
                 console.log("Image detect...");

@@ -18,7 +18,7 @@ if (isset($_SESSION["usu_id"])) {
 
     <?php require_once("../MainNav/nav.php"); ?>
 
-    <!-- Contenido -->
+    
     <div class="page-content">
       <div class="container-fluid">
 
@@ -113,7 +113,7 @@ if (isset($_SESSION["usu_id"])) {
 
       </div>
     </div>
-    <!-- Contenido -->
+    
 
     <?php require_once("../MainJs/js.php"); ?>
 
@@ -124,6 +124,6 @@ if (isset($_SESSION["usu_id"])) {
   </html>
 <?php
 } else {
-  header("Location:" . Conectar::ruta() . "index.php");
+  header("Location:" . Conectar::rota() . "index.php");
 }
 ?>

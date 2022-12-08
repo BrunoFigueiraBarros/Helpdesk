@@ -1,7 +1,7 @@
 <?php
     class Ticket extends Conectar{
 
-        public function insert_ticket($usu_id,$cat_id,$tick_titulo,$tick_descrip){
+        public function insert_ticket($usu_id,$cat_id,$tick_titulo,$tick_descricao){
             $conectar= parent::conexao();
             parent::set_names();
             $sql="INSERT INTO tm_ticket (tick_id,usu_id,cat_id,tick_titulo,tick_descrip,tick_estado,fech_crea,usu_asig,fech_asig,est) VALUES (NULL,?,?,?,?,'Aberto',now(),NULL,NULL,'1');";
@@ -9,7 +9,7 @@
             $sql->bindValue(1, $usu_id);
             $sql->bindValue(2, $cat_id);
             $sql->bindValue(3, $tick_titulo);
-            $sql->bindValue(4, $tick_descrip);
+            $sql->bindValue(4, $tick_descricao);
             $sql->execute();
 
             $sql1="select last_insert_id() as 'tick_id';";

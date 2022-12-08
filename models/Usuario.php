@@ -9,7 +9,7 @@
                 $pass = $_POST["usu_pass"];
                 $nivel = $_POST["usu_nivel"];
                 if(empty($email) and empty($pass)){
-                    header("Location:".conectar::ruta()."index.php?m=2");
+                    header("Location:".conectar::rota()."index.php?m=2");
 					exit();
                 }else{
                     $sql = "SELECT * FROM tm_usuario WHERE usu_email=? and usu_pass=MD5(?) and usu_nivel=? and est=1";
@@ -24,10 +24,10 @@
                         $_SESSION["usu_nom"]=$resultado["usu_nom"];
                         $_SESSION["usu_ape"]=$resultado["usu_ape"];
                         $_SESSION["nivel"]=$resultado["usu_nivel"];
-                        header("Location:".Conectar::ruta()."view/Home/");
+                        header("Location:".Conectar::rota()."view/Home/");
                         exit(); 
                     }else{
-                        header("Location:".Conectar::ruta()."index.php?m=1");
+                        header("Location:".Conectar::rota()."index.php?m=1");
                         exit();
                     }
                 }
