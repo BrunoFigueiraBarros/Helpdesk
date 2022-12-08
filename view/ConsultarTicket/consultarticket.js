@@ -55,7 +55,7 @@ $(document).ready(function(){
                 "sSearch":         "Buscar:",
                 "sUrl":            "",
                 "sInfoThousands":  ",",
-                "sLoadingRecords": "Cargando...",
+                "sLoadingRecords": "Carregando...",
                 "oPaginate": {
                     "sFirst":    "Primero",
                     "sLast":     "Último",
@@ -107,7 +107,7 @@ $(document).ready(function(){
                 "sSearch":         "Buscar:",
                 "sUrl":            "",
                 "sInfoThousands":  ",",
-                "sLoadingRecords": "Cargando...",
+                "sLoadingRecords": "Carregando...",
                 "oPaginate": {
                     "sFirst":    "Primero",
                     "sLast":     "Último",
