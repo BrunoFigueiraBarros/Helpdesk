@@ -12,15 +12,13 @@
     switch($_GET["op"]){
 
         case "insert":
-            $datos=$ticket->insert_ticket($_POST["usu_id"],$_POST["cat_id"],$_POST["tick_titulo"],$_POST["tick_descrip"]);
-            if (is_array($datos)==true and count($datos)>0){
-                foreach ($datos as $row){
-                    $output["tick_id"] = $row["tick_id"];
-
-                  
+            $dados=$ticket->insert_ticket($_POST["usu_id"],$_POST["cat_id"],$_POST["tick_titulo"],$_POST["tick_descrip"]);
+            if (is_array($dados)==true and count($dados)>0){
+                foreach ($dados as $row){
+                    $output["tick_id"] = $row["tick_id"];            
                 }
             }
-            echo json_encode($datos);
+            echo json_encode($dados);
         break;
 
         case "update":
@@ -38,9 +36,9 @@
         break;
 
         case "listar_x_usu":
-            $datos=$ticket->listar_ticket_x_usu($_POST["usu_id"]);
+            $dados=$ticket->listar_ticket_x_usu($_POST["usu_id"]);
             $data= Array();
-            foreach($datos as $row){
+            foreach($dados as $row){
                 $sub_array = array();
                 $sub_array[] = $row["tick_id"];
                 $sub_array[] = $row["cat_nom"];
@@ -63,8 +61,8 @@
                 if($row["usu_asig"]==null || $row["fech_asig"] == ""){
                     $sub_array[] = '<span class="label label-pill label-warning">Não atribuído</span>';
                 }else{
-                    $datos1=$usuario->get_usuario_x_id($row["usu_asig"]);
-                    foreach($datos1 as $row1){
+                    $dados1=$usuario->get_usuario_x_id($row["usu_asig"]);
+                    foreach($dados1 as $row1){
                         $sub_array[] = '<span class="label label-pill label-success">'. $row1["usu_nom"].'</span>';
                     }
                 }
@@ -82,9 +80,9 @@
         break;
 
         case "listar":
-            $datos=$ticket->listar_ticket();
+            $dados=$ticket->listar_ticket();
             $data= Array();
-            foreach($datos as $row){
+            foreach($dados as $row){
                 $sub_array = array();
                 $sub_array[] = $row["tick_id"];
                 $sub_array[] = $row["cat_nom"];
@@ -107,8 +105,8 @@
                 if($row["usu_asig"]==null){
                     $sub_array[] = '<a onClick="atribuir('.$row["tick_id"].');"><span class="label label-pill label-warning">Não atribuído</span></a>';
                 }else{
-                    $datos1=$usuario->get_usuario_x_id($row["usu_asig"]);
-                    foreach($datos1 as $row1){
+                    $dados1=$usuario->get_usuario_x_id($row["usu_asig"]);
+                    foreach($dados1 as $row1){
                         $sub_array[] = '<span class="label label-pill label-success">'. $row1["usu_nom"].'</span>';
                     }
                 }
@@ -126,10 +124,10 @@
         break;
 
         case "listardetalle":
-            $datos=$ticket->listar_ticketdetalle_x_ticket($_POST["tick_id"]);
+            $dados=$ticket->listar_ticketdetalle_x_ticket($_POST["tick_id"]);
             ?>
                 <?php
-                    foreach($datos as $row){
+                    foreach($dados as $row){
                         ?>
                             <article class="activity-line-item box-typical">
                                 <div class="activity-line-date">
@@ -174,9 +172,9 @@
         break;
 
         case "mostrar";
-            $datos=$ticket->listar_ticket_x_id($_POST["tick_id"]);  
-            if(is_array($datos)==true and count($datos)>0){
-                foreach($datos as $row)
+            $dados=$ticket->listar_ticket_x_id($_POST["tick_id"]);  
+            if(is_array($dados)==true and count($dados)>0){
+                foreach($dados as $row)
                 {
                     $output["tick_id"] = $row["tick_id"];
                     $output["usu_id"] = $row["usu_id"];
@@ -207,9 +205,9 @@
         break;
 
         case "total";
-            $datos=$ticket->get_ticket_total();  
-            if(is_array($datos)==true and count($datos)>0){
-                foreach($datos as $row)
+            $dados=$ticket->get_ticket_total();  
+            if(is_array($dados)==true and count($dados)>0){
+                foreach($dados as $row)
                 {
                     $output["TOTAL"] = $row["TOTAL"];
                 }
@@ -218,9 +216,9 @@
         break;
 
         case "totalaberto";
-            $datos=$ticket->get_ticket_totalaberto();  
-            if(is_array($datos)==true and count($datos)>0){
-                foreach($datos as $row)
+            $dados=$ticket->get_ticket_totalaberto();  
+            if(is_array($dados)==true and count($dados)>0){
+                foreach($dados as $row)
                 {
                     $output["TOTAL"] = $row["TOTAL"];
                 }
@@ -229,9 +227,9 @@
         break;
 
         case "totalFechado";
-            $datos=$ticket->get_ticket_totalFechado();  
-            if(is_array($datos)==true and count($datos)>0){
-                foreach($datos as $row)
+            $dados=$ticket->get_ticket_totalFechado();  
+            if(is_array($dados)==true and count($dados)>0){
+                foreach($dados as $row)
                 {
                     $output["TOTAL"] = $row["TOTAL"];
                 }
@@ -240,8 +238,8 @@
         break;
 
         case "grafico";
-            $datos=$ticket->get_ticket_grafico();  
-            echo json_encode($datos);
+            $dados=$ticket->get_ticket_grafico();  
+            echo json_encode($dados);
         break;
 
     }
