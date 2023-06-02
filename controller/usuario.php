@@ -14,9 +14,9 @@
             break;
 
         case "listar":
-            $dados=$usuario->get_usuario();
+            $datos=$usuario->get_usuario();
             $data= Array();
-            foreach($dados as $row){
+            foreach($datos as $row){
                 $sub_array = array();
                 $sub_array[] = $row["usu_nom"];
                 $sub_array[] = $row["usu_ape"];
@@ -47,9 +47,9 @@
             break;
 
         case "mostrar";
-            $dados=$usuario->get_usuario_x_id($_POST["usu_id"]);  
-            if(is_array($dados)==true and count($dados)>0){
-                foreach($dados as $row)
+            $datos=$usuario->get_usuario_x_id($_POST["usu_id"]);  
+            if(is_array($datos)==true and count($datos)>0){
+                foreach($datos as $row)
                 {
                     $output["usu_id"] = $row["usu_id"];
                     $output["usu_nom"] = $row["usu_nom"];
@@ -63,9 +63,9 @@
             break;
 
         case "total";
-            $dados=$usuario->get_usuario_total_x_id($_POST["usu_id"]);  
-            if(is_array($dados)==true and count($dados)>0){
-                foreach($dados as $row)
+            $datos=$usuario->get_usuario_total_x_id($_POST["usu_id"]);  
+            if(is_array($datos)==true and count($datos)>0){
+                foreach($datos as $row)
                 {
                     $output["TOTAL"] = $row["TOTAL"];
                 }
@@ -74,9 +74,9 @@
             break;
 
         case "totalaberto";
-            $dados=$usuario->get_usuario_totalaberto_x_id($_POST["usu_id"]);  
-            if(is_array($dados)==true and count($dados)>0){
-                foreach($dados as $row)
+            $datos=$usuario->get_usuario_totalaberto_x_id($_POST["usu_id"]);  
+            if(is_array($datos)==true and count($datos)>0){
+                foreach($datos as $row)
                 {
                     $output["TOTAL"] = $row["TOTAL"];
                 }
@@ -85,9 +85,9 @@
             break;
 
         case "totalFechado";
-            $dados=$usuario->get_usuario_totalFechado_x_id($_POST["usu_id"]);  
-            if(is_array($dados)==true and count($dados)>0){
-                foreach($dados as $row)
+            $datos=$usuario->get_usuario_totalFechado_x_id($_POST["usu_id"]);  
+            if(is_array($datos)==true and count($datos)>0){
+                foreach($datos as $row)
                 {
                     $output["TOTAL"] = $row["TOTAL"];
                 }
@@ -96,22 +96,22 @@
             break;
 
         case "grafico";
-            $dados=$usuario->get_usuario_grafico($_POST["usu_id"]);  
-            echo json_encode($dados);
+            $datos=$usuario->get_usuario_grafico($_POST["usu_id"]);  
+            echo json_encode($datos);
             break;
 
         case "combo";
-            $dados = $usuario->get_usuario_x_rol();
-            if(is_array($dados)==true and count($dados)>0){
+            $datos = $usuario->get_usuario_x_rol();
+            if(is_array($datos)==true and count($datos)>0){
                 $html.= "<option label='Seleccionar'></option>";
-                foreach($dados as $row)
+                foreach($datos as $row)
                 {
                     $html.= "<option value='".$row['usu_id']."'>".$row['usu_nom']."</option>";
                 }
                 echo $html;
             }
             break;
-      
+  
         case "password":
             $usuario->update_usuario_pass($_POST["usu_id"],$_POST["usu_pass"]);
             break;

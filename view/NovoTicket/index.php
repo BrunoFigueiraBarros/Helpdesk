@@ -71,9 +71,9 @@
 						<div class="col-lg-12">
 							<fieldset class="form-group">
 								<label class="form-label semibold" for="tick_descrip">Descrição</label>
-								<!-- <div class="summernote-theme-1"> class="summernote" id="tick_descrip"-->
+							
 									<textarea  name="tick_descrip"  class="form-control" id="tick_descrip" name="name"></textarea>
-								<!-- </div> -->
+							
 							</fieldset>
 						</div>
 						<div class="col-lg-12">

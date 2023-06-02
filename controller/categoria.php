@@ -5,9 +5,9 @@
 
     switch($_GET["op"]){
         case "combo":
-            $dados = $categoria->get_categoria();
-            if(is_array($dados)==true and count($dados)>0){
-                foreach($dados as $row)
+            $datos = $categoria->get_categoria();
+            if(is_array($datos)==true and count($datos)>0){
+                foreach($datos as $row)
                 {
                     $html.= "<option value='".$row['cat_id']."'>".$row['cat_nom']."</option>";
                 }
