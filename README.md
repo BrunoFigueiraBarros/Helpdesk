@@ -18,6 +18,7 @@ Este é um projeto de Help Desk construído em PHP utilizando o padrão MVC (Mod
 - AJAX: Técnica utilizada para atualização dinâmica da interface do usuário sem recarregar a página.
 - Banco de dados: Utilizado para armazenar os tickets e as informações dos usuários.
 - HTML e CSS: Utilizados para estruturação e estilização das páginas.
+- MySQL: Banco de dados relacional utilizado para armazenar os dados do sistema.
 
 ## Instalação
 
@@ -40,4 +41,4 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 Se tiver alguma dúvida ou quiser entrar em contato, você pode me encontrar em:
 
 - Email: bruno_figueira59@hotmail.com   
-- GitHub: [seuusername](https://github.com/BrunoFigueiraBarros)
+- GitHub: [BrunoFigueiraBarros](https://github.com/BrunoFigueiraBarros)
