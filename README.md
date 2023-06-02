@@ -48,3 +48,7 @@ Se tiver alguma dúvida ou quiser entrar em contato, você pode me encontrar em:
 
 - Email: bruno_figueira59@hotmail.com   
 - GitHub: [BrunoFigueiraBarros](https://github.com/BrunoFigueiraBarros)
+
+## Acesso ao projeto
+
+Para acessar o projeto, visite [este link](https://figueirabarros.com.br/helpdesk/).
