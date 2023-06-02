@@ -1,3 +1,7 @@
+
+
+![Helpdesk](https://figueirabarros.com.br/helpdesk/public/img/Screenshot_6.png)
+
 # Help Desk MVC em PHP com JavaScript e AJAX
 
 Este é um projeto de Help Desk construído em PHP utilizando o padrão MVC (Model-View-Controller). O sistema permite que os usuários registrem tickets de suporte técnico, acompanhem o status dos tickets e obtenham suporte dos administradores.
