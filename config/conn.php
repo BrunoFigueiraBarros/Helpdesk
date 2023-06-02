@@ -7,7 +7,7 @@
         protected function Conexao(){
             try {
         
-				$conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=u147978366_helpdesk","u147978366_helpdeskuser","=0&Da=Sc");
+				$conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=","","");
            
 				return $conectar;
 			} catch (Exception $e) {
