@@ -24,9 +24,7 @@
             <div class="container-fluid">
 
                 <form class="sign-box" action="" method="post" id="login_form">
-
                     <input type="hidden" id="usu_nivel" name="usu_nivel" value="1">
-
                     <div class="sign-avatar">
                         <img src="public/1.jpg" alt="" id="imgtipo">
                     </div>
