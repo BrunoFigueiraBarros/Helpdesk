@@ -2,7 +2,6 @@
     require_once("../config/conn.php");
     require_once("../models/Categoria.php");
     $categoria = new Categoria();
-
     switch($_GET["op"]){
         case "combo":
             $datos = $categoria->get_categoria();
