@@ -22,7 +22,6 @@
     <div class="page-center">
         <div class="page-center-in">
             <div class="container-fluid">
-
                 <form class="sign-box" action="" method="post" id="login_form">
                     <input type="hidden" id="usu_nivel" name="usu_nivel" value="1">
                     <div class="sign-avatar">
@@ -58,7 +57,6 @@
                             }
                         }
                     ?>
-
                     <div class="form-group">
                         <input type="text" id="usu_email" name="usu_email" class="form-control" placeholder="E-Mail"/>
                     </div>
