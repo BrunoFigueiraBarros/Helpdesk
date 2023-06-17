@@ -29,7 +29,6 @@
                         <img src="public/1.jpg" alt="" id="imgtipo">
                     </div>
                     <header class="sign-title" id="lbltitulo">Acesso do usuário</header>
-
                     <?php
                         if (isset($_GET["m"])){
                             switch($_GET["m"]){
