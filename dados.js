@@ -4,7 +4,6 @@ function init(){
 $(document).ready(function() {
 
 });
-
 $(document).on("click", "#btnSuporte", function () {
     if ($('#usu_nivel').val()==1){
         $('#lbltitulo').html("Acceso Suporte");
