@@ -3,8 +3,6 @@
     require_once("../config/conn.php");
     require_once("../models/documento.php");
     $documento = new Documento();
-
-
     switch($_GET["op"]){
     
         case "listar":
